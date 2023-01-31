@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add item to table</title>
+    <style>
+        .table{
+            width: 320px;
+            text-align: center;
+        }
+        .table tr:nth-child(even){
+            background-color: rgb(212, 208, 208);
+        }
+    </style>
+</head>
+<body>
+    <!-- <form action="POST" name="sample">
+        <input type="text" name="fname" id="">
+        <input type="text" name="lname" id="">
+        <input type="button" name="add" value="Add" onclick="addData()">
+        <hr>
+    </form>
+    <table id="table" border="1">
+        <thead>
+            <tr>
+                <th>Firstname</th><th>Lastname</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script type="text/javascript">
+        function addData(){
+            let fname = document.sample.fname.value
+            let lname = document.sample.lname.value
+
+            let tr = document.createElement('tr')
+
+            let td1 = tr.appendChild(document.createElement('td'))
+            let td2 = tr.appendChild(document.createElement('td'))
+
+            td1.innerHTML = fname
+            td2.innerHTML = lname
+
+            let table = document.getElementById('table')
+            table.appendChild(tr)
+        }
+    </script> -->
+    <input type="text" id="fname">
+    <input type="text" id="lname">
+    <input type="button" value="Add" id="btn">
+    <hr>
+    <table class="table" border="1">
+        <thead>
+            <tr>
+                <th>
+                    Firstname
+                </th>
+                <th>
+                    Lastname
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+        let fname = document.querySelector('#fname')
+        let lname = document.querySelector('#lname')
+        let table = document.querySelector('.table')
+        let btn = document.querySelector('#btn')
+
+        btn.addEventListener('click',()=>{
+            let tr = document.createElement('tr')
+            let td1 = tr.appendChild(document.createElement('td'))
+            let td2 = tr.appendChild(document.createElement('td'))
+            td1.innerHTML = fname.value
+            td2.innerHTML = lname.value
+            table.appendChild(tr)
+        })
+    </script>
+</body>
+</html>
